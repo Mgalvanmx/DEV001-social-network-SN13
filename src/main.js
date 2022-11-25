@@ -26,6 +26,7 @@ const rootSection = document.querySelector('#root');
 //   username.value = '';
 //   password.value = '';
 // });
+
 const juanpatricio = () => {
   const logIn = document.createElement('form');
   const formulario = `
@@ -46,7 +47,6 @@ const juanpatricio = () => {
     password.value = '';
   });
   rootSection.insertAdjacentElement('beforeend', logIn);
-
 };
 
 window.onload = juanpatricio;
