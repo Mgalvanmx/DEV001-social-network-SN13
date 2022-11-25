@@ -17,13 +17,36 @@ const logIn = () => {
 
 window.onload = logIn();
 
-const userData = () => {
-  db.collection('userLogin').add({
-    username: username.value,
-    bio: password.value,
+// btnLogin.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   db.collection('userLogin').add({
+//     username: username.value,
+//     bio: password.value,
+//   });
+//   username.value = '';
+//   password.value = '';
+// });
+
+const juanpatricio = () => {
+  const logIn = document.createElement('form');
+  const formulario = `
+      <input id="username" type="text" placeholder="username">
+      <input id="password" type="password" placeholder="password">
+      <button id="btnLogin">Login</button>`;
+  logIn.innerHTML = formulario;
+  const btnLogin = logIn.querySelector('#btnLogin');
+  const username = logIn.querySelector('#username');
+  const password = logIn.querySelector('#password');
+  btnLogin.addEventListener('click', (e) => {
+    e.preventDefault();
+    db.collection('userLogin').add({
+      username: username.value,
+      bio: password.value,
+    });
+    username.value = '';
+    password.value = '';
   });
-  username.value = '';
-  password.value = '';
+  rootSection.insertAdjacentElement('beforeend', logIn);
 };
 btnLogin.addEventListener('click', userData());
 
