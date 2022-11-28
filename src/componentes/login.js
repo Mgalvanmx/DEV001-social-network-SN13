@@ -19,3 +19,4 @@ export const juanpatricio = (db, documento) => {
   });
   documento.insertAdjacentElement('beforeend', logIn);
 };
+
