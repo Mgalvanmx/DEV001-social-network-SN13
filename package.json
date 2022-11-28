@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.19.4",
+    "@types/firebase": "^3.2.1",
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -33,24 +34,16 @@
     "regenerator-runtime": "^0.13.1",
     "stylelint": "^14.1.0",
     "stylelint-config-recommended": "^6.0.0",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
   },
   "engines": {
     "node": ">=16.x"
   },
   "dependencies": {
-    "firebase": "^9.14.0"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mgalvanmx/DEV001-social-network-SN13.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/Mgalvanmx/DEV001-social-network-SN13/issues"
-  },
-  "homepage": "https://github.com/Mgalvanmx/DEV001-social-network-SN13#readme"
+    "@firebase/firestore": "^3.7.3",
+    "firebase": "^9.14.0",
+    "firebase-admin": "^11.3.0"
+  }
 }
