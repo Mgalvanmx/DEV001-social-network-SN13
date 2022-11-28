@@ -18,3 +18,4 @@ export const logIn = (db, documento) => {
   documento.insertAdjacentElement('beforeend', formLogIn);
 };
 
+
