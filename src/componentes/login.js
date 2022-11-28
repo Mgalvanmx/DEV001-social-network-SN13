@@ -1,8 +1,8 @@
-export const juanpatricio = (db, documento) => {
+export const juanpatricio = (documento, saveUser) => {
   const logIn = document.createElement('form');
   const formulario = `
-        <input id="username" type="text" placeholder="username">
-        <input id="password" type="password" placeholder="password">
+        <input id="username" type="text" placeholder="username" required>
+        <input id="password" type="password" placeholder="password" required>
         <button id="btnLogin">Login</button>`;
   logIn.innerHTML = formulario;
   const btnLogin = logIn.querySelector('#btnLogin');
@@ -10,12 +10,7 @@ export const juanpatricio = (db, documento) => {
   const password = logIn.querySelector('#password');
   btnLogin.addEventListener('click', (e) => {
     e.preventDefault();
-    db.collection('userLogin').add({
-      username: username.value,
-      bio: password.value,
-    });
-    username.value = '';
-    password.value = '';
+    saveUser(username.value, password.value);
   });
   documento.insertAdjacentElement('beforeend', logIn);
 };

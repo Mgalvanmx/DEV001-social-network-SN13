@@ -1,3 +1,10 @@
+import {
+  addDoc,
+  collection,
+  initializeApp,
+  getFirestore,
+} from './firebase-imports.js';
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCkD69li7OY4KM6LvGVOcBHZjg8wPRTngY',
   authDomain: 'rrss-peliculas.firebaseapp.com',
@@ -8,5 +15,9 @@ const firebaseConfig = {
   measurementId: 'G-VBM6GMN9EZ',
 };
 
-const app = firebase.initializeApp(firebaseConfig);
-export const db = firebase.firestore(app);
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore();
+
+export const saveUser = (user, password) => {
+  addDoc(collection(db, 'userLogin'), { user, password });
+};
