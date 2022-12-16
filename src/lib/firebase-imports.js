@@ -1,4 +1,4 @@
-import {
+/*import {
   addDoc,
   getFirestore,
   collection,
@@ -11,3 +11,4 @@ export {
   collection,
   initializeApp,
 };
+*/
